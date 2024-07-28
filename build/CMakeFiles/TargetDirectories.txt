@@ -1,0 +1,4 @@
+/Users/verdayuksel/CLionProjects/MyProject/build/CMakeFiles/MyProject.dir
+/Users/verdayuksel/CLionProjects/MyProject/build/CMakeFiles/imgui.dir
+/Users/verdayuksel/CLionProjects/MyProject/build/CMakeFiles/edit_cache.dir
+/Users/verdayuksel/CLionProjects/MyProject/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,19 @@
+# ninja log v6
+18	418	1722196000156117381	CMakeFiles/MyProject.dir/src/imgui-master/imgui_demo.cpp.o	f033033e61158b47
+17	508	1722196583572844811	CMakeFiles/MyProject.dir/src/main.cpp.o	8abb59b4b6e35e30
+505	676	1722195670983528635	CMakeFiles/MyProject.dir/src/imgui-master/examples/example_sdl2_opengl3/main.cpp.o	bae2aca87272ca65
+177	378	1722195670655801496	CMakeFiles/imgui.dir/src/imgui-master/backends/imgui_impl_sdl2.cpp.o	1a51919fbebedf9b
+18	763	1722195670496462794	CMakeFiles/imgui.dir/src/imgui-master/imgui.cpp.o	f61d5774e3ac8742
+19	177	1722195670497372026	CMakeFiles/imgui.dir/src/imgui-master/backends/imgui_impl_opengl3.cpp.o	d0c77ce4cadf5289
+417	477	1722196000555077750	libimgui.a	77bbf1d59464981e
+1	66	1722196601309343068	build.ninja	18c21596023d7571
+378	580	1722195670856546989	CMakeFiles/imgui.dir/src/imgui-master/examples/example_sdl2_opengl3/main.cpp.o	30c37cdf2d665cc1
+18	497	1722195670496705373	CMakeFiles/imgui.dir/src/imgui-master/imgui_draw.cpp.o	cc8f1e0029af6e7a
+18	360	1722195670496822620	CMakeFiles/imgui.dir/src/imgui-master/imgui_tables.cpp.o	341ea0855ae3b901
+19	672	1722195670497193946	CMakeFiles/imgui.dir/src/imgui-master/imgui_widgets.cpp.o	dc3abd698afd87ab
+360	747	1722195670838614100	CMakeFiles/imgui.dir/check_opengl_version.cpp.o	b611635544d31c08
+508	566	1722196584063903685	MyProject	466792652d6c38c7
+17	417	1722196000155321439	CMakeFiles/imgui.dir/src/imgui-master/imgui_demo.cpp.o	252651cc5c956ff2
+19	505	1722195670497838558	CMakeFiles/imgui.dir/src/imgui-master/backends/imgui_impl_glfw.cpp.o	f8abdfbcbe35b0b6
+18	534	1722196763686551551	CMakeFiles/MyProject.dir/src/main.cpp.o	8abb59b4b6e35e30
+534	593	1722196764201973130	MyProject	466792652d6c38c7
