@@ -5,6 +5,22 @@
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl3.h"
 #include <iostream>
+#include <vector>
+#include <string>
+
+// Kullanıcı verilerini saklamak için yapı
+struct User {
+    std::string name;
+    std::string surname;
+    int age;
+};
+
+// Global değişkenler
+std::vector<User> users;
+bool showList = false;
+char currentName[128] = "";
+char currentSurname[128] = "";
+int currentAge = 0;
 
 void error_callback(int error, const char* description) {
     std::cerr << "Error: " << description << std::endl;
@@ -57,14 +73,49 @@ int main() {
 }
 
 void render(GLFWwindow* window) {
+    // Yeni çerçeve başlat
     ImGui_ImplOpenGL3_NewFrame();
     ImGui_ImplGlfw_NewFrame();
     ImGui::NewFrame();
 
-    ImGui::Begin("Hello, world!");
-    ImGui::Text("This is some useful text.");
+    ImGui::Begin("KAYIT SİSTEMİ");
+
+    if (showList) {
+        // Kayıtlı kullanıcıları göster
+        ImGui::Text("KAYITLI KİŞİLER");
+
+        for (size_t i = 0; i < users.size(); ++i) {
+            ImGui::Text("%zu. %s %s %d", i + 1, users[i].name.c_str(), users[i].surname.c_str(), users[i].age);
+        }
+
+        if (ImGui::Button("Yeni Kayıt")) {
+            showList = false; // Yeni kayıt formuna dön
+        }
+    } else {
+        // Kayıt formu
+        ImGui::InputText("Ad", currentName, IM_ARRAYSIZE(currentName));
+        ImGui::InputText("Soyad", currentSurname, IM_ARRAYSIZE(currentSurname));
+        ImGui::InputInt("Yaş", &currentAge);
+
+        if (ImGui::Button("Kayıt Et")) {
+            if (currentName[0] != '\0' && currentSurname[0] != '\0' && currentAge > 0) {
+                users.push_back({currentName, currentSurname, currentAge});
+                std::fill(std::begin(currentName), std::end(currentName), 0);
+                std::fill(std::begin(currentSurname), std::end(currentSurname), 0);
+                currentAge = 0;
+            } else {
+                ImGui::Text("Lütfen tüm alanları doldurduğunuzdan emin olun.");
+            }
+        }
+
+        if (ImGui::Button("Listele")) {
+            showList = true; // Kayıtlı kullanıcıları göster
+        }
+    }
+
     ImGui::End();
 
+    // Render işlemlerini yap
     ImGui::Render();
     int display_w, display_h;
     glfwGetFramebufferSize(window, &display_w, &display_h);
